@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Audio Player </title>
+
+	<!-- Audio Player CSS & Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="js/mediaelement-and-player.min.js"></script>
+	<link rel="stylesheet" href="css/style.css" media="screen">
+	<!-- end Audio Player CSS & Scripts -->
+
+	<style type="text/css">
+		html, body { margin: 0;	padding: 0; }
+		body { padding: 260px; background: #f2f2f2  no-repeat top center; }
+		.audio-player { margin: 0 auto;}
+	</style>
+<meta name="robots" content="noindex,follow" />
+</head>
+
+<body>
+
+	
+	<div class="audio-player">
+		<audio id="audio-player" src="media/music1.mp3" type="audio/mp3" controls="controls"></audio>
+		<audio id="audio-player" src="media/music2.mp3" type="audio/mp3" controls="controls"></audio>
+		<audio id="audio-player" src="media/music3.mp3" type="audio/mp3" controls="controls"></audio>
+		<audio id="audio-player" src="media/music4.mp3" type="audio/mp3" controls="controls"></audio>
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			$('#audio-player').mediaelementplayer({
+				alwaysShowControls: true,
+				features: ['playpause','volume','progress'],
+				audioVolume: 'horizontal',
+				audioWidth: 400,
+				audioHeight: 120
+			});
+		});
+	</script>
+	
+
+</body>
+
+</html>
